@@ -1,4 +1,4 @@
-def input_students
+s.esacnwoddef input_students
   puts "Please enter the names of the students"
   puts "To finish, just hit return twice"
   # create an emtpy array
@@ -23,17 +23,16 @@ def print_header
 end
 
 def print(students)
-  students.each_with_index do |student, index|
-  indexplusone = index +  1
-  puts "#{indexplusone}. #{student[:name]} (#{student[:cohort]} cohort)"
+  students.each_with_index() do |student, i|
+    if student[:name].downcase.start_with? "e"
+      puts "#{i + 1}. #{student[:name]} (#{student[:cohort]} cohort)"
+    end
+  end
 end
-end
-
 
 def print_footer(students)
   puts "Overall, we have #{students.count} great students"
 end
-
 
 students = input_students
 # nothing happens until we call the methods
