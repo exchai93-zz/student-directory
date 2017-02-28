@@ -1,4 +1,4 @@
-s.esacnwoddef input_students
+def input_students
   puts "Please enter the names of the students"
   puts "To finish, just hit return twice"
   # create an emtpy array
@@ -10,7 +10,7 @@ s.esacnwoddef input_students
     # add the student hash to the array
     students << {name: name, cohort: :november}
     puts "Now we have #{students.count} students"
-    # get another naem from the user
+    # get another name from the user
     name = gets.chomp
   end
   # return the array of students
@@ -23,8 +23,8 @@ def print_header
 end
 
 def print(students)
-  students.each_with_index() do |student, i|
-    if student[:name].downcase.start_with? "e"
+  students.each_with_index do |student, i|
+    if student[:name].length < 13
       puts "#{i + 1}. #{student[:name]} (#{student[:cohort]} cohort)"
     end
   end
