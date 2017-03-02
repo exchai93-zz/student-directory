@@ -35,7 +35,7 @@ end
 # extract the code that prints the students into a method
 def show_students
   print_header
-  print_stuents_list 
+  print_students_list
   print_footer
 end
 
@@ -58,13 +58,13 @@ def print_header
   puts "-------------"
 end
 
-def print
+def print_students_list
   @students.each do |student|
-    puts "#{@student[:name]} (#{@student[:cohort]} cohort)"
+    puts "#{student[:name]} (#{student[:cohort]} cohort)"
   end
 end
 
-def print_footer(names)
+def print_footer
   puts "Overall, we have #{@students.count} great students."
 end
 
