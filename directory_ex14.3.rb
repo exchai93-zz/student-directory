@@ -47,7 +47,11 @@ def input_students
   @name = STDIN.gets.chomp
   while !@name.empty? do
     add_students
-    puts "Now we have #{@students.count} students"
+    if @students.count > 1
+      puts "Now we have #{@students.count} students."
+    else
+      puts "Now we have #{@students.count} student."
+    end
     @name = STDIN.gets.chomp
   end
 end
