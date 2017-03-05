@@ -37,13 +37,13 @@ def menu_process(selection)
     when "9"
       exit
     else
-      "I don't know what you mean, try again"
+      "Please choose an option from the menu."
     end
 end
 
 def input_students
-  puts "Please enter the names of the students"
-  puts "To finish, just hit return twice"
+  puts "Please enter the names of the students."
+  puts "To finish, just hit return twice."
   @name = STDIN.gets.chomp
   while !@name.empty? do
     add_students
